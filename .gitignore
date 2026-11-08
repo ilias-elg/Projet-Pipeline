@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Fichiers générés par le pipeline
+logs/
+storage/processed/
+serving/output/
