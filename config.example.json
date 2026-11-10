@@ -1,0 +1,11 @@
+{
+  "ipinfo_token": "PUT_YOUR_IPINFO_LITE_TOKEN_HERE",
+  "log_year": 2026,
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "dbname": "log_analysis",
+    "user": "postgres",
+    "password": "PUT_YOUR_POSTGRES_PASSWORD_HERE"
+  }
+}

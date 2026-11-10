@@ -13,3 +13,6 @@ wheels/
 logs/
 storage/processed/
 serving/output/
+
+# Secrets (token IPinfo, mot de passe PostgreSQL)
+config.json
