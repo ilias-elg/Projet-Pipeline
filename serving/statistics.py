@@ -77,6 +77,12 @@ def failures_by_weekday_hour(events: list):
     return grid
 
 
+def successful_logins_detail(events: list):
+    """Liste (utilisateur, IP, date, heure) de chaque connexion réussie."""
+    return [(event['user'], event['ip'], event['date'], event['time'])
+            for event in events if event['event_type'] == 'accepted']
+
+
 def compute_statistics(events: list):
     """Toutes les statistiques nécessaires au dashboard."""
     by_country = failures_by_country(events)
@@ -92,6 +98,7 @@ def compute_statistics(events: list):
         'distinct_ips': len({event['ip'] for event in events if event['ip']}),
         'failures_by_country': by_country,
         'successes_by_user': by_user,
+        'successful_logins_detail': successful_logins_detail(events),
         'invalid_users': invalid,
         'failures_by_date': failures_by_date(events),
         'failures_by_hour': failures_by_hour(events),
